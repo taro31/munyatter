@@ -1,46 +1,49 @@
-<!--       <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>むにゃったー</title>
-  </head>         -->
-  <body>
-    <header>
-      <h1>むにゃったー</h1>
-    </header>
-    <div class="contents">
+<body>
+  <header>
+    <div class="top clearfix">
+      <div class="title">
+          <h1>むにゃったー</h1>
+      </div>
       
-      <% @tweets.reverse_each do |tweet| %>
+      <div class="gotoform">
+        <p class=munyaru>
+          <%= link_to "むにゃる！", "/tweets/new" %>
+        </p>
+      </div>
       
-          <div class="message clearfix">
-            <%= image_tag 'cat1.png' %>
-            <div class="message_box">
-              <p class="user_name">
-                むにゃ猫1号
-                <!-- <span class="time">・8月13日</span> -->
-              <p>
-              <p class="text">
-               
-               <p><%= tweet.text %></p>
-               
-              </p>
-            </div>
-          </div>
-      
-      <% end %>
-      
+    </div>
+  </header>
+    
+  <div class="contents">
+    <% @tweets.reverse_each do |tweet| %>
       <div class="message clearfix">
-        <%= image_tag 'cat1.png' %>
+    <%= image_tag 'cat1.png' %>
         <div class="message_box">
-          <p class="user_name">たま
-            <!-- <span class="time">・8月13日</span> -->
+          <p class="user_name">
+              むにゃ猫1号
+                <!-- <span class="time">・8月13日</span> -->
           <p>
           <p class="text">
-            家宝は寝て待てにゃー。急がば回れにゃー。蓼食う虫も好き好きにゃー。一念岩をも通すにゃー。千石取れば万石羨むにゃー。
-          <p>
+            <p><%= tweet.text %></p>
+               
+          </p>
         </div>
       </div>
-    </div>
-  </body>
-<!--   </html>   -->
+    <% end %>
+      
+      <!--<div class="message clearfix">-->
+      <!--  <%= image_tag 'cat1.png' %>-->
+      <!--  <div class="message_box">-->
+      <!--    <p class="user_name">たま-->
+            <!-- <span class="time">・8月13日</span> -->
+      <!--    <p>-->
+      <!--    <p class="text">-->
+      <!--      家宝は寝て待てにゃー。急がば回れにゃー。蓼食う虫も好き好きにゃー。一念岩をも通すにゃー。千石取れば万石羨むにゃー。-->
+      <!--    <p>-->
+      <!--  </div>-->
+      <!--</div>-->
+  </div>
+  <footer>
+    <p>MunyaNeko World</p>
+  </footer>
+</body>
